@@ -9,7 +9,13 @@ require("dotenv").config();
 const Email = require("./Email");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://bulkmail-new.vercel.app",
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"]
+}));
+app.options("*", cors());
+
 app.use(express.json());
 
 // MongoDB
