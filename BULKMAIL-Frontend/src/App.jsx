@@ -22,7 +22,7 @@ function App() {
       setStatus("");
 
       const res = await axios.post(
-        "https://bulkmail-new-1.onrender.com/sendemail",
+        'https://bulkmail-new-2.onrender.com/sendemail',
         formData
       );
 
